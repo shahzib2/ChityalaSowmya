@@ -1,0 +1,122 @@
+/* Custom Styles */
+:root {
+    --primary-color: #4f46e5;
+    --primary-hover: #4338ca;
+}
+
+/* Animation Classes */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Preview Container Responsive Sizes */
+.preview-desktop {
+    width: 100%;
+    height: 600px;
+}
+
+.preview-tablet {
+    width: 768px;
+    height: 1024px;
+    margin: 0 auto;
+}
+
+.preview-mobile {
+    width: 375px;
+    height: 667px;
+    margin: 0 auto;
+}
+
+/* Color Options */
+.color-option {
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.color-option::after {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border: 2px solid transparent;
+    border-radius: inherit;
+    transition: all 0.2s ease;
+}
+
+.color-option.selected::after {
+    border-color: var(--primary-color);
+}
+
+/* Layout Options */
+.layout-option {
+    transition: all 0.2s ease;
+}
+
+.layout-option.selected {
+    border-color: var(--primary-color);
+    background-color: rgba(79, 70, 229, 0.1);
+}
+
+/* AI Chat */
+.ai-message {
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.user-message {
+    background-color: #e0e7ff;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Export Options */
+.export-option {
+    transition: all 0.2s ease;
+}
+
+.export-option:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Loading Spinner */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.animate-spin {
+    animation: spin 1s linear infinite;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+    .preview-desktop, .preview-tablet, .preview-mobile {
+        width: 100%;
+        height: 500px;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
